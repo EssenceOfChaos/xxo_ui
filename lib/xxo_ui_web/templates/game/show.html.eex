@@ -1,0 +1,18 @@
+<h1>Show Game</h1>
+
+<ul>
+
+  <li>
+    <strong>In progress:</strong>
+    <%= @game.in_progress %>
+  </li>
+
+  <li>
+    <strong>Winner:</strong>
+    <%= @game.winner %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.game_path(@conn, :edit, @game) %></span>
+<span><%= link "Back", to: Routes.game_path(@conn, :index) %></span>

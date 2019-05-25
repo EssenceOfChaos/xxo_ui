@@ -1,0 +1,28 @@
+<h1>Listing Games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>In progress</th>
+      <th>Winner</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for game <- @games do %>
+    <tr>
+      <td><%= game.in_progress %></td>
+      <td><%= game.winner %></td>
+
+      <td>
+        <%= link "Show", to: Routes.game_path(@conn, :show, game) %>
+        <%= link "Edit", to: Routes.game_path(@conn, :edit, game) %>
+        <%= link "Delete", to: Routes.game_path(@conn, :delete, game), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Game", to: Routes.game_path(@conn, :new) %></span>

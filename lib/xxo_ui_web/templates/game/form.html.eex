@@ -1,0 +1,37 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :in_progress %>
+  <%= checkbox f, :in_progress %>
+  <%= error_tag f, :in_progress %>
+
+  <%= label f, :winner %>
+  <%= text_input f, :winner %>
+  <%= error_tag f, :winner %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>
+
+<div class="game-board">
+  <div class="box" id="top-left">top-left</div>
+  <div class="box" id="top-mid" onclick="logme(event)">top-mid</div>
+  <div class="box" id="top-left">top-left</div>
+  <div class="box" id="mid-left">mid-left</div>
+  <div class="box" id="mid-mid">mid-mid</div>
+  <div class="box" id="mid-right">mid-right</div>
+  <div class="box" id="down-left">down-left</div>
+  <div class="box" id="down-mid">down-mid</div>
+  <div class="box" id="down-right">down-right</div>
+</div>
+
+<script>
+  function logme(e) {
+    console.log(e.target.innerHTML);
+  }
+</script>

@@ -1,0 +1,83 @@
+<!-- Page Contents -->
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item">Home</a>
+        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+        <div class="right item">
+          <a class="ui inverted button">Log in</a>
+          <a class="ui inverted button">Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        Welcome to xxo!
+      </h1>
+      <h2>Which character are you?</h2>
+    </div>
+    <br />
+
+<div class="ui character grid">
+<div class="four wide column"></div>
+    <div class="eight wide column">
+      <div class="ui tiny images">
+        <img src="/images/characters/aaargh.svg">
+        <img src="/images/characters/abby.svg">
+        <img src="/images/characters/billy.svg">
+        <img src="/images/characters/casper.svg">
+        <img src="/images/characters/dave.svg">
+      </div>
+    </div>
+    <div class="four wide column"></div>
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+    <div class="ui tiny images">
+        <img src="/images/characters/larry.svg">
+        <img src="/images/characters/oscar.svg">
+        <img src="/images/characters/pika.svg">
+        <img src="/images/characters/robert.svg">
+        <img src="/images/characters/stanley.svg">
+      </div>
+    </div>
+<div class="four wide column"></div>
+</div>
+
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">Contact Us</a>
+            <a href="#" class="item">Religious Ceremonies</a>
+            <a href="#" class="item">Gazebo Plans</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Banana Pre-Order</a>
+            <a href="#" class="item">DNA FAQ</a>
+            <a href="#" class="item">How To Access</a>
+            <a href="#" class="item">Favorite X-Men</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Thanks for playing!</h4>
+          <p>Created by <a href="https://github.com/essenceofchaos">Frederick John</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
