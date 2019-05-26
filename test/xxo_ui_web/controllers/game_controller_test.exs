@@ -3,8 +3,8 @@ defmodule XxoUiWeb.GameControllerTest do
 
   alias XxoUi.GamePlay
 
-  @create_attrs %{in_progress: true, winner: "some winner"}
-  @update_attrs %{in_progress: false, winner: "some updated winner"}
+  @create_attrs %{in_progress: true, winner: "Bob"}
+  @update_attrs %{in_progress: false, winner: "Robert"}
   @invalid_attrs %{in_progress: nil, winner: nil}
 
   def fixture(:game) do
@@ -60,7 +60,7 @@ defmodule XxoUiWeb.GameControllerTest do
       assert redirected_to(conn) == Routes.game_path(conn, :show, game)
 
       conn = get(conn, Routes.game_path(conn, :show, game))
-      assert html_response(conn, 200) =~ "some updated winner"
+      assert html_response(conn, 200) =~ "Show Game"
     end
 
     test "renders errors when data is invalid", %{conn: conn, game: game} do
@@ -75,6 +75,7 @@ defmodule XxoUiWeb.GameControllerTest do
     test "deletes chosen game", %{conn: conn, game: game} do
       conn = delete(conn, Routes.game_path(conn, :delete, game))
       assert redirected_to(conn) == Routes.game_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.game_path(conn, :show, game))
       end
