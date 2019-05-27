@@ -1,6 +1,5 @@
 language: elixir
 elixir:
-    - 1.5
     - 1.6
     - 1.7
     - 1.8
@@ -19,10 +18,12 @@ before_script:
     - mix deps.get
     - mix do ecto.create, ecto.migrate
     - nvm install 6.2 && nvm use 6.2
+
 script:
     - mix test
     - mix credo
     - cd assets && npm install
+
 cache:
     directories:
         - assets/node_modules
