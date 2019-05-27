@@ -1,4 +1,7 @@
 defmodule XxoUi.GamePlay.Game do
+  @moduledoc """
+  The Game model: represents a game of xxo
+  """
   use Ecto.Schema
   import Ecto.Changeset
 

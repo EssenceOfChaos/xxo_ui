@@ -1,4 +1,7 @@
 defmodule XxoUi.MixProject do
+  @moduledoc """
+  The application entry point and list of dependencies.
+  """
   use Mix.Project
 
   def project do
