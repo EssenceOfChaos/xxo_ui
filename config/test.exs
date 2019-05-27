@@ -12,7 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :xxo_ui, XxoUi.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "",
   database: "xxo_ui_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

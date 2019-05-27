@@ -21,12 +21,14 @@
       <h1 class="ui inverted header">
         Welcome to xxo!
       </h1>
-      <h2>Which character are you?</h2>
+      <h2>Select your character!</h2>
     </div>
     <br />
 
 <div class="ui character grid">
-<div class="four wide column"></div>
+
+<div class="four wide column"></div><!--first four columns -->
+    <!-- eight - wide - column ----------------------------->
     <div class="eight wide column">
       <div class="ui tiny images">
         <img src="/images/characters/aaargh.svg">
@@ -36,6 +38,8 @@
         <img src="/images/characters/dave.svg">
       </div>
     </div>
+    <!-- / eight - wide - column -------------------------->
+
     <div class="four wide column"></div>
     <div class="four wide column"></div>
     <div class="eight wide column">
@@ -47,7 +51,7 @@
         <img src="/images/characters/stanley.svg">
       </div>
     </div>
-<div class="four wide column"></div>
+<div class="four wide column"></div><!--last four columns -->
 </div>
 
 
