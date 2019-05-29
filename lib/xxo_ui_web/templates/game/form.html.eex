@@ -1,21 +1,6 @@
 <%= form_for @changeset, @action, fn f -> %>
-  <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
-    </div>
-  <% end %>
 
-  <%= label f, :in_progress %>
-  <%= checkbox f, :in_progress %>
-  <%= error_tag f, :in_progress %>
 
-  <%= label f, :winner %>
-  <%= text_input f, :winner %>
-  <%= error_tag f, :winner %>
-
-  <div>
-    <%= submit "Save" %>
-  </div>
 <% end %>
 
 <div class="game-board">
