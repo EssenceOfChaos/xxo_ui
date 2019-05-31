@@ -17,6 +17,8 @@ defmodule XxoUiWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/games/new/:char", GameController, :new
+
     resources "/games", GameController
   end
 

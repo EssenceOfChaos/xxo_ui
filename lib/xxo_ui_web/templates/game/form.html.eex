@@ -1,11 +1,26 @@
-<%= form_for @changeset, @action, fn f -> %>
+  <div class="ui grid">
+  <div class="two wide column"></div>
+  <div class="four wide column">
+  <div class="ui card">
+  <div class="image">
+    <img src="<%= @char %>">
+  </div>
+  <div class="content">
+    <a class="header"><%= format_name(@char) %></a>
+    <div class="meta">
+      <span class="date">meta data</span>
+    </div>
+    <div class="description">
+      <%= @char %>
+    </div>
+  </div>
 
-
-<% end %>
-
-<div class="game-board">
+</div>
+  </div>
+  <div class="ten wide column">
+  <div class="game-board">
   <div class="box" id="top-left">top-left</div>
-  <div class="box" id="top-mid" onclick="logme(event)">top-mid</div>
+  <div class="box" id="top-mid">top-mid</div>
   <div class="box" id="top-left">top-left</div>
   <div class="box" id="mid-left">mid-left</div>
   <div class="box" id="mid-mid">mid-mid</div>
@@ -14,9 +29,21 @@
   <div class="box" id="down-mid">down-mid</div>
   <div class="box" id="down-right">down-right</div>
 </div>
+  </div>
 
-<script>
-  function logme(e) {
-    console.log(e.target.innerHTML);
-  }
-</script>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

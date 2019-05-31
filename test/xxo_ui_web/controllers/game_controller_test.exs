@@ -1,4 +1,7 @@
 defmodule XxoUiWeb.GameControllerTest do
+  @moduledoc """
+  Testing the Game Controller
+  """
   use XxoUiWeb.ConnCase
 
   alias XxoUi.GamePlay
@@ -39,7 +42,7 @@ defmodule XxoUiWeb.GameControllerTest do
 
     test "renders errors when data is invalid", %{conn: conn} do
       conn = post(conn, Routes.game_path(conn, :create), game: @invalid_attrs)
-      assert html_response(conn, 200) =~ "New Game"
+      assert html_response(conn, 200) =~ "Good Luck!"
     end
   end
 

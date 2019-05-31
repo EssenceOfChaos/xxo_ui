@@ -16,6 +16,12 @@
     <!-- 12 - wide - column ----------------------------->
     <div class="twelve wide column">
       <div class="ui tiny images">
+      <%=
+        "/images/characters/aaargh.svg"
+        |> img_tag()
+        |> link(to:  Routes.game_path(@conn, :new, "/images/characters/aaargh.svg"))
+      %>
+
         <img src="/images/characters/aaargh.svg">
         <img src="/images/characters/abby.svg">
         <img src="/images/characters/billy.svg">
@@ -37,7 +43,7 @@
       </div>
     </div>
 <div class="two wide column">
-    <span><%= link "New Game", to: Routes.game_path(@conn, :new), class: "ui primary button" %></span>
+
 
 </div>
 </div> <!-- end of character list -->

@@ -10,9 +10,9 @@ function logClick(event) {
 window.addEventListener('DOMContentLoaded', event => {
     console.log('DOM fully loaded and parsed');
     console.log(window.location.href);
-    document
-        .getElementById('character-list')
-        .addEventListener('click', logClick);
+    // document
+    //     .getElementById('character-list')
+    //     .addEventListener('click', logClick);
 });
 
 // new game

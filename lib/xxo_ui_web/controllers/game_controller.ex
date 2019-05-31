@@ -9,9 +9,11 @@ defmodule XxoUiWeb.GameController do
     render(conn, "index.html", games: games)
   end
 
-  def new(conn, _params) do
-    changeset = GamePlay.change_game(%Game{})
-    render(conn, "new.html", changeset: changeset)
+  def new(conn, %{"char" => char}) do
+    IO.inspect(char)
+    # changeset = GamePlay.change_game(%Game{})
+    # Xxo.new_game(char)
+    render(conn, "new.html", char: char)
   end
 
   def create(conn, %{"game" => game_params}) do
