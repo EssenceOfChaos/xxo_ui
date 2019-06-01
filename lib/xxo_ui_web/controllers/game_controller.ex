@@ -2,7 +2,8 @@ defmodule XxoUiWeb.GameController do
   use XxoUiWeb, :controller
 
   alias XxoUi.GamePlay
-  alias XxoUi.GamePlay.Game
+  #   alias XxoUi.GamePlay.Game
+  alias XxoUiWeb.GameView
 
   def index(conn, _params) do
     games = GamePlay.list_games()
@@ -10,9 +11,10 @@ defmodule XxoUiWeb.GameController do
   end
 
   def new(conn, %{"char" => char}) do
-    IO.inspect(char)
+    IO.inspect("~~~~ GAME CONTROLLER - :NEW CALLED ~~~~")
+    IO.inspect(GameView.format_name(char))
     # changeset = GamePlay.change_game(%Game{})
-    # Xxo.new_game(char)
+    Xxo.new_game(GameView.format_name(char))
     render(conn, "new.html", char: char)
   end
 

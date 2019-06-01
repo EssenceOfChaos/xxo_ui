@@ -7,12 +7,8 @@
   </div>
   <div class="content">
     <a class="header"><%= format_name(@char) %></a>
-    <div class="meta">
-      <span class="date">meta data</span>
-    </div>
-    <div class="description">
-      <%= @char %>
-    </div>
+    <div class="meta"><span class="date">meta data</span></div>
+    <div class="description"></div>
   </div>
 
 </div>

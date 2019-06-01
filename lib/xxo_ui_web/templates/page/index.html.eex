@@ -22,7 +22,7 @@
         |> link(to:  Routes.game_path(@conn, :new, "/images/characters/aaargh.svg"))
       %>
 
-        <img src="/images/characters/aaargh.svg">
+
         <img src="/images/characters/abby.svg">
         <img src="/images/characters/billy.svg">
         <img src="/images/characters/casper.svg">

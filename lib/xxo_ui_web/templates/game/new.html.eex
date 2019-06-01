@@ -1,4 +1,4 @@
 <h2> Good Luck! </h2>
 <%= render "form.html", Map.put(assigns, :action, Routes.game_path(@conn, :create)) %>
 
-<span><%= link "Back", to: Routes.game_path(@conn, :index) %></span>
+<span><%= link "Quit", to: Routes.game_path(@conn, :index), class: "ui red button" %></span>
