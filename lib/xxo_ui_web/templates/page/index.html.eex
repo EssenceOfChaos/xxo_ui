@@ -12,34 +12,66 @@
 
 <div class="ui character grid" id="character-list">
 
-<div class="two wide column"></div><!--first 2 columns -->
-    <!-- 12 - wide - column ----------------------------->
+<div class="two wide column"></div>
     <div class="twelve wide column">
       <div class="ui tiny images">
-      <%=
-        "/images/characters/aaargh.svg"
-        |> img_tag()
-        |> link(to:  Routes.game_path(@conn, :new, "/images/characters/aaargh.svg"))
-      %>
-
-
-        <img src="/images/characters/abby.svg">
-        <img src="/images/characters/billy.svg">
-        <img src="/images/characters/casper.svg">
+      <!-- Aaargh -->
+        <%=
+            "/images/characters/aaargh.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "aaargh"))
+        %>
+        <!-- Abby -->
+        <%=
+            "/images/characters/abby.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "abby"))
+        %>
+        <!-- Billy -->
+        <%=
+            "/images/characters/billy.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "billy"))
+        %>
+        <!-- Casper -->
+        <%=
+            "/images/characters/casper.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "casper"))
+        %>
 
       </div>
     </div>
-    <!-- / 12 - wide - column -------------------------->
-    <div class="two wide column"></div>
-<!-- END OF FIRST ROW OF CHARACTERS -->
 
+    <div class="two wide column"></div>
+<!-------- END OF FIRST ROW OF CHARACTERS -------->
     <div class="two wide column"></div>
     <div class="twelve wide column">
     <div class="ui tiny images">
-        <img src="/images/characters/oscar.svg">
-        <img src="/images/characters/pika.svg">
-        <img src="/images/characters/robert.svg">
-        <img src="/images/characters/stanley.svg">
+    <!-- Oscar -->
+        <%=
+            "/images/characters/oscar.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "oscar"))
+        %>
+    <!-- Pika -->
+        <%=
+            "/images/characters/pika.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "pika"))
+        %>
+    <!-- Robert -->
+        <%=
+            "/images/characters/robert.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "robert"))
+        %>
+    <!-- Stanley -->
+        <%=
+            "/images/characters/stanley.svg"
+            |> img_tag()
+            |> link(to:  Routes.game_path(@conn, :new, "stanley"))
+        %>
       </div>
     </div>
 <div class="two wide column">

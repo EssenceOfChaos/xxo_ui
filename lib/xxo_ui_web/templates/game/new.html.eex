@@ -2,3 +2,4 @@
 <%= render "form.html", Map.put(assigns, :action, Routes.game_path(@conn, :create)) %>
 
 <span><%= link "Quit", to: Routes.game_path(@conn, :index), class: "ui red button" %></span>
+

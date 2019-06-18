@@ -6,9 +6,34 @@
 //
 // Pass the token on params as below. Or remove it
 // from the params if you are not using authentication.
-import {Socket} from "phoenix"
+import { Socket } from 'phoenix';
 
-let socket = new Socket("/socket", {params: {token: window.userToken}})
+let socket = new Socket('/socket', { params: { token: window.userToken } });
+socket.connect();
+
+let match = document.location.pathname.match(/\/games\/new\/(\w+)$/);
+if (match) {
+    let userCharacter = match[1];
+    let channel = socket.channel(`game:${userCharacter}`, {});
+
+    channel.on('new_move', data => {
+        console.log('new move received', data);
+        const elem = document.getElementById('user_move');
+        elem.insertAdjacentHTML('afterbegin', data.body);
+    });
+
+    channel
+        .join()
+        .receive('ok', resp => {
+            console.log(
+                `Joined successfully - User has choosen ${userCharacter}`,
+                resp
+            );
+        })
+        .receive('error', resp => {
+            console.log('Unable to join', resp);
+        });
+}
 
 // When you connect, you'll often need to authenticate the client.
 // For example, imagine you have an authentication plug, `MyAuth`,
@@ -52,12 +77,17 @@ let socket = new Socket("/socket", {params: {token: window.userToken}})
 //     end
 //
 // Finally, connect to the socket:
-socket.connect()
+// socket.connect();
 
-// Now that you are connected, you can join channels with a topic:
-let channel = socket.channel("topic:subtopic", {})
-channel.join()
-  .receive("ok", resp => { console.log("Joined successfully", resp) })
-  .receive("error", resp => { console.log("Unable to join", resp) })
+// // Now that you are connected, you can join channels with a topic:
+// let channel = socket.channel('topic:subtopic', {});
+// channel
+//     .join()
+//     .receive('ok', resp => {
+//         console.log('Joined successfully', resp);
+//     })
+//     .receive('error', resp => {
+//         console.log('Unable to join', resp);
+//     });
 
-export default socket
+export default socket;

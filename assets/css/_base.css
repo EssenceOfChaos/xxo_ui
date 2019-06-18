@@ -158,3 +158,16 @@ div.ui.character.grid {
 a.ui.red.button {
     margin-left: 25px;
 }
+
+div#top-left.box:hover,
+div#top-mid.box:hover,
+div#top-right.box:hover,
+div#mid-left.box:hover,
+div#mid-mid.box:hover,
+div#mid-right.box:hover,
+div#down-left.box:hover,
+div#down-mid.box:hover,
+div#down-right.box:hover {
+    cursor: pointer;
+    border: 5px solid yellow;
+}
