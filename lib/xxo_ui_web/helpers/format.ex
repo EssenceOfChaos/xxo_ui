@@ -3,6 +3,8 @@ defmodule XxoUiWeb.Helpers do
   Utility functions used thoughout the code
   """
 
+  # name comes in as "/images/characters/aaargh.svg"
+  # goal is to extract out the "aaargh" part
   def format_name(string) do
     string
     |> String.split(~r{/})

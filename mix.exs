@@ -17,9 +17,6 @@ defmodule XxoUi.MixProject do
     ]
   end
 
-  # Configuration for the OTP application.
-  #
-  # Type `mix help compile.app` for more information.
   def application do
     [
       mod: {XxoUi.Application, []},
@@ -27,13 +24,10 @@ defmodule XxoUi.MixProject do
     ]
   end
 
-  # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
 
-  # Specifies your project dependencies.
-  #
-  # Type `mix help deps` for examples and options.
+  # Specifies project dependencies.
   defp deps do
     [
       {:phoenix, "~> 1.4.3"},
@@ -47,18 +41,14 @@ defmodule XxoUi.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       ### Added Deps ###
-      {:xxo, "~> 1.0.0"},
+      {:xxo, "~> 1.1.0"},
       {:ex_machina, "~> 2.3"},
       {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
-  # For example, to create, migrate and run the seeds file at once:
-  #
-  #     $ mix ecto.setup
-  #
-  # See the documentation for `Mix` for more info on aliases.
+
   defp aliases do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],

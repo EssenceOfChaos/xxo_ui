@@ -7,7 +7,18 @@
   </div>
   <div class="content">
     <a class="header" id="userCharacter"><%= @char %></a>
-    <div class="meta"><span class="date">meta data</span></div>
+
+    <div class="meta">
+
+    <br>
+        <span class="date">
+
+          Finished?: <%= Xxo.GameServer.get_state(@char).finished %>
+          <br />
+          Action on?: <%= Xxo.GameServer.get_state(@char).action_on %>
+        </span>
+    </div>
+
     <div class="description"></div>
   </div>
 
@@ -16,22 +27,21 @@
 
   <div class="ten wide column">
     <div class="game-board">
-    <div class="box" id="top-left"></div>
-    <div class="box" id="top-mid"></div>
-    <div class="box" id="top-right"></div>
-    <div class="box" id="mid-left"></div>
-    <div class="box" id="mid-mid"></div>
-    <div class="box" id="mid-right"></div>
-    <div class="box" id="down-left"></div>
-    <div class="box" id="down-mid"></div>
-    <div class="box" id="down-right"></div>
+    <div class="box" id="top-left"><%=get_image(@game_board[{0,0}]) |> img_tag()%></div>
+    <div class="box" id="top-mid"><%=get_image(@game_board[{0,1}]) |> img_tag()%></div>
+    <div class="box" id="top-right"><%=get_image(@game_board[{0,2}]) |> img_tag()%></div>
+    <div class="box" id="mid-left"><%=get_image(@game_board[{1,0}]) |> img_tag()%></div>
+    <div class="box" id="mid-mid"><%=get_image(@game_board[{1,1}]) |> img_tag()%></div>
+    <div class="box" id="mid-right"><%=get_image(@game_board[{1,2}]) |> img_tag()%></div>
+    <div class="box" id="down-left"><%=get_image(@game_board[{2,0}]) |> img_tag()%></div>
+    <div class="box" id="down-mid"><%=get_image(@game_board[{2,1}]) |> img_tag()%></div>
+    <div class="box" id="down-right"><%=get_image(@game_board[{2,2}]) |> img_tag()%></div>
     </div>
   </div>
     <div class="two wide column"></div>
       <div class="four wide column">
-       <strong> Action on: </strong> <%= XxoUi.GamePlay.game_status(@char).action_on %>
+       <strong> Action on: </strong>
         <br>
-        <strong> Game finished: </strong>  <%= XxoUi.GamePlay.game_status(@char).finished %>
         <div id="user_move"></div>
       </div>
 </div>

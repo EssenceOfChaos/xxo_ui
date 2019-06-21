@@ -1,6 +1,6 @@
 defmodule XxoUiWeb.UserSocket do
   use Phoenix.Socket
-
+  require Logger
   ## Channels
   channel "game:*", XxoUiWeb.GameChannel
 
@@ -15,7 +15,8 @@ defmodule XxoUiWeb.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
-  def connect(_params, socket, _connect_info) do
+  def connect(_params, socket, _conn) do
+    Logger.info("connecting to the UserSocket.")
     {:ok, socket}
   end
 

@@ -169,5 +169,10 @@ div#down-left.box:hover,
 div#down-mid.box:hover,
 div#down-right.box:hover {
     cursor: pointer;
-    border: 5px solid yellow;
+    border: 4px solid yellow;
 }
+
+/* img {
+    height: 100px;
+    width: 100px;
+} */

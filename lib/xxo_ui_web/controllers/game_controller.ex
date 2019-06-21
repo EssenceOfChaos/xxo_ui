@@ -10,9 +10,13 @@ defmodule XxoUiWeb.GameController do
   end
 
   def new(conn, %{"char" => char}) do
-    # changeset = GamePlay.change_game(%Game{})
     Xxo.new_game(char)
-    render(conn, "new.html", char: char)
+    state = Xxo.GameServer.get_state(char)
+    board = state.board
+
+    conn
+    |> assign(:game_board, board)
+    |> render("new.html", game_board: board, char: char)
   end
 
   def create(conn, %{"game" => game_params}) do
