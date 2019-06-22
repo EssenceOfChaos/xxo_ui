@@ -29,7 +29,7 @@
         %>
         <!-- Billy -->
         <%=
-            "/images/characters/billy.svg"
+            "/images/characters/billy.png"
             |> img_tag()
             |> link(to:  Routes.game_path(@conn, :new, "billy"))
         %>
@@ -48,17 +48,17 @@
     <div class="two wide column"></div>
     <div class="twelve wide column">
     <div class="ui tiny images">
-    <!-- Oscar -->
+    <!-- Octopus -->
         <%=
-            "/images/characters/oscar.svg"
+            "/images/characters/octopus.png"
             |> img_tag()
-            |> link(to:  Routes.game_path(@conn, :new, "oscar"))
+            |> link(to:  Routes.game_path(@conn, :new, "octopus"))
         %>
-    <!-- Pika -->
+    <!-- Tongue -->
         <%=
-            "/images/characters/pika.svg"
+            "/images/characters/tongue.png"
             |> img_tag()
-            |> link(to:  Routes.game_path(@conn, :new, "pika"))
+            |> link(to:  Routes.game_path(@conn, :new, "tongue"))
         %>
     <!-- Robert -->
         <%=

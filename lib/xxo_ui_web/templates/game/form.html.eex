@@ -2,11 +2,12 @@
   <div class="two wide column"></div>
   <div class="four wide column">
   <div class="ui card">
-  <div class="image">
-    <img src="<%= get_image(@char) %>" alt="image goes here">
-  </div>
-  <div class="content">
-    <a class="header" id="userCharacter"><%= @char %></a>
+    <div class="content">
+    <div class="image">
+        <img src="<%= get_image(@char) %>" alt="image goes here" class="right floated tiny ui image">
+    </div>
+
+    <a class="header" id="userCharacter"><%= String.capitalize(@char) %></a>
 
     <div class="meta">
 
@@ -20,6 +21,13 @@
     </div>
 
     <div class="description"></div>
+     <div class="extra content">
+     <br />
+        <div class="ui two buttons">
+            <div class="ui basic green button">Approve</div>
+            <div class="ui basic red button">Decline</div>
+        </div>
+     </div>
   </div>
 
 </div>
@@ -40,7 +48,6 @@
   </div>
     <div class="two wide column"></div>
       <div class="four wide column">
-       <strong> Action on: </strong>
         <br>
         <div id="user_move"></div>
       </div>

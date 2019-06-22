@@ -41,7 +41,7 @@ defmodule XxoUi.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       ### Added Deps ###
-      {:xxo, "~> 1.1.0"},
+      {:xxo, "~> 1.1.1"},
       {:ex_machina, "~> 2.3"},
       {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]

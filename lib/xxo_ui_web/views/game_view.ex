@@ -5,13 +5,13 @@ defmodule XxoUiWeb.GameView do
     case character do
       "aaargh" -> "/images/characters/aaargh.svg"
       "abby" -> "/images/characters/abby.svg"
-      "billy" -> "/images/characters/billy.svg"
+      "billy" -> "/images/characters/billy.png"
       "casper" -> "/images/characters/casper.svg"
-      "oscar" -> "/images/characters/oscar.svg"
-      "pika" -> "/images/characters/pika.svg"
+      "octopus" -> "/images/characters/octopus.png"
+      "tongue" -> "/images/characters/tongue.png"
       "robert" -> "/images/characters/robert.svg"
       "stanley" -> "/images/characters/stanley.svg"
-      "x" -> "/images/x-symbol.png"
+      "x" -> "/images/characters/godzilla.png"
       _ -> " "
     end
   end

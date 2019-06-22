@@ -25,5 +25,5 @@
   "postgrex": {:hex, :postgrex, "0.14.3", "5754dee2fdf6e9e508cbf49ab138df964278700b764177e8f3871e658b345a1e", [:mix], [{:connection, "~> 1.0", [hex: :connection, repo: "hexpm", optional: false]}, {:db_connection, "~> 2.0", [hex: :db_connection, repo: "hexpm", optional: false]}, {:decimal, "~> 1.5", [hex: :decimal, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: true]}], "hexpm"},
   "ranch": {:hex, :ranch, "1.7.1", "6b1fab51b49196860b733a49c07604465a47bdb78aa10c1c16a3d199f7f8c881", [:rebar3], [], "hexpm"},
   "telemetry": {:hex, :telemetry, "0.4.0", "8339bee3fa8b91cb84d14c2935f8ecf399ccd87301ad6da6b71c09553834b2ab", [:rebar3], [], "hexpm"},
-  "xxo": {:hex, :xxo, "1.1.0", "cc3742e9beb66de90e60a9fdd5ff3ad633008eb67b93202c24606414753a6d13", [:mix], [{:gen_state_machine, "~> 2.0.5", [hex: :gen_state_machine, repo: "hexpm", optional: false]}], "hexpm"},
+  "xxo": {:hex, :xxo, "1.1.1", "3a31256301d919d774ac3e684730e575879a6d3a5a98958a4f047188d74e5dc6", [:mix], [{:gen_state_machine, "~> 2.0.5", [hex: :gen_state_machine, repo: "hexpm", optional: false]}], "hexpm"},
 }

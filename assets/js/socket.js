@@ -1,6 +1,8 @@
 import { Socket } from 'phoenix';
 
-const userCharacter = document.getElementById('userCharacter').innerHTML;
+const userCharacter = document
+    .getElementById('userCharacter')
+    .innerHTML.toLowerCase();
 
 let actionOn = userCharacter;
 
@@ -115,7 +117,7 @@ function pushNewMove(userCharacter, location) {
  * @param {string} square
  */
 function removeSquareFromArr(square) {
-    let index = squares.indexOf('square');
+    let index = squares.indexOf(square);
     squares.splice(index, 1);
 }
 
@@ -134,10 +136,10 @@ function getCharacterImage(characterName) {
     let imgObj = {
         aaargh: '/images/characters/aaargh.svg',
         abby: '/images/characters/abby.svg',
-        billy: '/images/characters/billy.svg',
+        billy: '/images/characters/billy.png',
         casper: '/images/characters/casper.svg',
-        oscar: '/images/characters/oscar.svg',
-        pika: '/images/characters/pika.svg',
+        octopus: '/images/characters/octopus.png',
+        tongue: '/images/characters/tongue.png',
         robert: '/images/characters/robert.svg',
         stanley: '/images/characters/stanley.svg'
     };

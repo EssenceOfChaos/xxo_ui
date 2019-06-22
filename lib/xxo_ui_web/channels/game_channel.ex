@@ -22,10 +22,9 @@ defmodule XxoUiWeb.GameChannel do
     {:noreply, socket}
   end
 
-  def handle_info({:after_join, user_char}, socket) do
-    state = Xxo.GameServer.get_state(user_char)
-    socket = assign(socket, :state, state)
-    Logger.debug(socket)
+  def handle_info({:after_join, _user_char}, socket) do
+    # game = Xxo.new_game(user_char)
+    # socket = assign(socket, :game_state, game.board)
     {:noreply, socket}
   end
 
