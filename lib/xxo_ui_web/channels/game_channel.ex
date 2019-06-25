@@ -16,8 +16,9 @@ defmodule XxoUiWeb.GameChannel do
   def handle_in("new_move", %{"user" => user, "move" => move}, socket) do
     Xxo.GameServer.player_move(user, user, convert_id_to_coordinates(move))
 
+    pass_action(user, "x")
+
     broadcast!(socket, "new_move", %{"user" => user, "move" => move})
-    Xxo.GameServer.computer_move(user, "x")
 
     {:noreply, socket}
   end
@@ -29,6 +30,9 @@ defmodule XxoUiWeb.GameChannel do
   end
 
   ## Private Functions ##
+  defp pass_action(user, symbol) do
+    Xxo.GameServer.computer_move(user, symbol)
+  end
 
   # TODO: reduce cyclomatic complexity of convert_id_to_coordinates
   defp convert_id_to_coordinates(id) do

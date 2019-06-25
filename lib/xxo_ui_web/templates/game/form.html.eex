@@ -11,21 +11,15 @@
 
     <div class="meta">
 
-    <br>
-        <span class="date">
-
-          Finished?: <%= Xxo.GameServer.get_state(@char).finished %>
-          <br />
-          Action on?: <%= Xxo.GameServer.get_state(@char).action_on %>
-        </span>
+        <span class="date"></span>
     </div>
 
     <div class="description"></div>
      <div class="extra content">
      <br />
         <div class="ui two buttons">
-            <div class="ui basic green button">Approve</div>
-            <div class="ui basic red button">Decline</div>
+            <div class="ui basic green button">Play Again</div>
+            <div class="ui basic red button">Quit</div>
         </div>
      </div>
   </div>

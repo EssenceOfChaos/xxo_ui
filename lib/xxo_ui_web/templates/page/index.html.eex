@@ -10,6 +10,8 @@
     </div>
     <br />
 
+<div id="react-mount"></div>
+
 <div class="ui character grid" id="character-list">
 
 <div class="two wide column"></div>
