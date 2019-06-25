@@ -1,10 +1,13 @@
 import { Socket } from 'phoenix';
 
-const userCharacter = document
-    .getElementById('userCharacter')
-    .innerHTML.toLowerCase();
+let userCharacter;
 
-let actionOn = userCharacter;
+if (window.location.href.includes('games/new')) {
+    console.log('we have a new game !');
+    userCharacter = document
+        .getElementById('userCharacter')
+        .innerHTML.toLowerCase();
+}
 
 const squares = [
     'top-left',
@@ -20,8 +23,7 @@ const squares = [
 
 let socket = new Socket('/socket', {
     params: {
-        token: window.userToken,
-        userCharacter: userCharacter
+        token: window.userToken
     }
 });
 
@@ -65,19 +67,19 @@ const downMid = document.getElementById('down-mid');
 const downRight = document.getElementById('down-right');
 
 // ------- define event listeners ------- //
+if (window.location.href.includes('games/new')) {
+    topLeft.addEventListener('click', handleClick);
+    topMid.addEventListener('click', handleClick);
+    topRight.addEventListener('click', handleClick);
 
-topLeft.addEventListener('click', handleClick);
-topMid.addEventListener('click', handleClick);
-topRight.addEventListener('click', handleClick);
+    midLeft.addEventListener('click', handleClick);
+    midMid.addEventListener('click', handleClick);
+    midRight.addEventListener('click', handleClick);
 
-midLeft.addEventListener('click', handleClick);
-midMid.addEventListener('click', handleClick);
-midRight.addEventListener('click', handleClick);
-
-downLeft.addEventListener('click', handleClick);
-downMid.addEventListener('click', handleClick);
-downRight.addEventListener('click', handleClick);
-
+    downLeft.addEventListener('click', handleClick);
+    downMid.addEventListener('click', handleClick);
+    downRight.addEventListener('click', handleClick);
+}
 // ----- define callback handlers ----- //
 
 function handleClick(event) {
@@ -106,6 +108,7 @@ function pushNewMove(userCharacter, location) {
     });
 
     removeSquareFromArr(location);
+    document.location.reload(true);
 }
 
 //

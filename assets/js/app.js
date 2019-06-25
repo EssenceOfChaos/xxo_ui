@@ -1,7 +1,7 @@
 // We need to import the CSS so that webpack will load it.
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
-import css from "../css/app.css"
+import css from '../css/app.css';
 
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured
@@ -9,9 +9,21 @@ import css from "../css/app.css"
 //
 // Import dependencies
 //
-import "phoenix_html"
-import game from './game'
+import 'phoenix_html';
+import game from './game';
 // Import local files
 //
 // Local files can be imported directly using relative paths, for example:
-import socket from "./socket"
+import socket from './socket';
+
+// import and setup React
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const Index = () => {
+    return <div>Hello React!</div>;
+};
+
+window.addEventListener('DOMContentLoaded', event => {
+    ReactDOM.render(<Index />, document.getElementById('react-mount'));
+});
