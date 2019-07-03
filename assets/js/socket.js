@@ -89,8 +89,8 @@ function handleClick(event) {
     let image = document.createElement('IMG');
     image.setAttribute('src', userImage);
     image.setAttribute('alt', 'A flat monster icon');
-    image.setAttribute('width', '100');
-    image.setAttribute('height', '100');
+    image.setAttribute('width', '128');
+    image.setAttribute('height', '128');
     userSelection.appendChild(image);
 
     pushNewMove(userCharacter, event.target.id);
@@ -138,12 +138,12 @@ function moveActionForward() {
 function getCharacterImage(characterName) {
     let imgObj = {
         aaargh: '/images/characters/aaargh.svg',
-        abby: '/images/characters/abby.svg',
-        billy: '/images/characters/billy.png',
+        abby: '/images/characters/abby.png',
+        frank: '/images/characters/frank.png',
         casper: '/images/characters/casper.svg',
         octopus: '/images/characters/octopus.png',
-        tongue: '/images/characters/tongue.png',
-        robert: '/images/characters/robert.svg',
+        'monster-tree': '/images/characters/monster-tree.png',
+        'happy-ghost': '/images/characters/happy-ghost.png',
         stanley: '/images/characters/stanley.svg'
     };
 

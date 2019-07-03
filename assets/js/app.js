@@ -21,7 +21,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const Index = () => {
-    return <div>Hello React!</div>;
+    return <div>Choose your character below to begin playing</div>;
 };
 
 window.addEventListener('DOMContentLoaded', event => {

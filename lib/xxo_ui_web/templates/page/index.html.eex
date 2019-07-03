@@ -25,15 +25,15 @@
         %>
         <!-- Abby -->
         <%=
-            "/images/characters/abby.svg"
+            "/images/characters/abby.png"
             |> img_tag()
             |> link(to:  Routes.game_path(@conn, :new, "abby"))
         %>
         <!-- Billy -->
         <%=
-            "/images/characters/billy.png"
+            "/images/characters/frank.png"
             |> img_tag()
-            |> link(to:  Routes.game_path(@conn, :new, "billy"))
+            |> link(to:  Routes.game_path(@conn, :new, "frank"))
         %>
         <!-- Casper -->
         <%=
@@ -56,17 +56,17 @@
             |> img_tag()
             |> link(to:  Routes.game_path(@conn, :new, "octopus"))
         %>
-    <!-- Tongue -->
+    <!-- Monster tree -->
         <%=
-            "/images/characters/tongue.png"
+            "/images/characters/monster-tree.png"
             |> img_tag()
-            |> link(to:  Routes.game_path(@conn, :new, "tongue"))
+            |> link(to:  Routes.game_path(@conn, :new, "monster-tree"))
         %>
-    <!-- Robert -->
+    <!-- Happy Ghost -->
         <%=
-            "/images/characters/robert.svg"
+            "/images/characters/happy-ghost.png"
             |> img_tag()
-            |> link(to:  Routes.game_path(@conn, :new, "robert"))
+            |> link(to:  Routes.game_path(@conn, :new, "happy-ghost"))
         %>
     <!-- Stanley -->
         <%=

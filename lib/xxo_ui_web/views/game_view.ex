@@ -4,12 +4,12 @@ defmodule XxoUiWeb.GameView do
   def get_image(character) do
     case character do
       "aaargh" -> "/images/characters/aaargh.svg"
-      "abby" -> "/images/characters/abby.svg"
-      "billy" -> "/images/characters/billy.png"
+      "abby" -> "/images/characters/abby.png"
+      "frank" -> "/images/characters/frank.png"
       "casper" -> "/images/characters/casper.svg"
       "octopus" -> "/images/characters/octopus.png"
-      "tongue" -> "/images/characters/tongue.png"
-      "robert" -> "/images/characters/robert.svg"
+      "monster-tree" -> "/images/characters/monster-tree.png"
+      "happy-ghost" -> "/images/characters/happy-ghost.png"
       "stanley" -> "/images/characters/stanley.svg"
       "x" -> "/images/characters/godzilla.png"
       _ -> " "

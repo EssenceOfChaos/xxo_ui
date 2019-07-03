@@ -14,12 +14,12 @@ defmodule XxoUiWeb.GameChannel do
   end
 
   def handle_in("new_move", %{"user" => user, "move" => move}, socket) do
-    Xxo.GameServer.player_move(user, user, convert_id_to_coordinates(move))
-
-    pass_action(user, "x")
+    case Xxo.GameServer.player_move(user, user, convert_id_to_coordinates(move)) do
+      {:ok, _} -> pass_action(user, "x")
+      {:game_over, _} -> socket = assign(socket, :game_over, true)
+    end
 
     broadcast!(socket, "new_move", %{"user" => user, "move" => move})
-
     {:noreply, socket}
   end
 
